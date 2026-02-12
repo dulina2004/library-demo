@@ -16,8 +16,8 @@ require_once __DIR__ . '/functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Library Management System - University Project">
-    <title><?php echo isset($pageTitle) ? sanitize($pageTitle) . ' | ' : ''; ?>Library Management System</title>
+    <meta name="description" content="BookFlow - Library Management System">
+    <title><?php echo isset($pageTitle) ? sanitize($pageTitle) . ' | ' : ''; ?>BookFlow</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@ require_once __DIR__ . '/functions.php';
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand fw-bold" href="<?php echo baseUrl(); ?>/index.php">
-            <i class="bi bi-book-half me-2"></i>LibraryMS
+            <i class="bi bi-book-half me-2"></i>BookFlow
         </a>
         
         <!-- Mobile Toggle -->

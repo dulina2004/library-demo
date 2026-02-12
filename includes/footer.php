@@ -15,7 +15,7 @@
             <div class="col-md-6">
                 <p class="mb-0">
                     <i class="bi bi-book-half me-1"></i>
-                    <strong>Library Management System</strong> &copy; <?php echo date('Y'); ?>
+                    <strong>BookFlow</strong> &copy; <?php echo date('Y'); ?>
                 </p>
             </div>
             <div class="col-md-6 text-md-end">

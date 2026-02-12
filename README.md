@@ -1,6 +1,6 @@
-# 📚 Library Management System
+# 📚 BookFlow — Library Management System
 
-A complete web-based Library Management System built with **PHP**, **MySQL**, and **Bootstrap 5** for a university group assignment.
+A complete web-based Library Management System (**BookFlow**) built with **PHP**, **MySQL**, and **Bootstrap 5** for a university group assignment.
 
 ---
 
