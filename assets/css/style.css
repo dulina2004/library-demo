@@ -1,0 +1,321 @@
+/**
+ * Library Management System - Custom Styles
+ * 
+ * This file contains custom CSS overrides for Bootstrap 5.
+ * Color Scheme: Deep navy (#1a1a2e) + Accent purple (#6c63ff)
+ */
+
+/* ====== CSS VARIABLES (Design Tokens) ====== */
+:root {
+    --primary-color: #6c63ff;
+    --primary-hover: #5a52d5;
+    --primary-light: rgba(108, 99, 255, 0.1);
+    --dark-bg: #1a1a2e;
+    --dark-bg-light: #16213e;
+    --text-primary: #2d3436;
+    --text-muted: #636e72;
+    --border-color: #e9ecef;
+    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    --transition-speed: 0.3s;
+}
+
+/* ====== GLOBAL STYLES ====== */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text-primary);
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+a {
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* ====== NAVBAR ====== */
+.bg-primary-custom {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-bg-light) 100%) !important;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand i {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    padding: 0.5rem 0.8rem !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all var(--transition-speed);
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: var(--primary-color) !important;
+}
+
+/* ====== BUTTONS ====== */
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    transition: all var(--transition-speed);
+    box-shadow: 0 2px 8px rgba(108, 99, 255, 0.3);
+}
+
+.btn-primary-custom:hover {
+    background: linear-gradient(135deg, var(--primary-hover), #4a42c0);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+    color: #fff;
+}
+
+.btn-primary-custom:active {
+    transform: translateY(0);
+}
+
+/* ====== CARDS ====== */
+.card {
+    border-radius: 12px;
+    transition: all var(--transition-speed);
+}
+
+.card:hover {
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* ====== STAT CARDS (Dashboard) ====== */
+.stat-card {
+    border-left: 4px solid var(--primary-color) !important;
+    overflow: hidden;
+}
+
+.stat-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.bg-primary-light { background-color: rgba(108, 99, 255, 0.1); }
+.bg-success-light { background-color: rgba(0, 184, 148, 0.1); }
+.bg-warning-light { background-color: rgba(253, 203, 110, 0.15); }
+.bg-danger-light { background-color: rgba(214, 48, 49, 0.1); }
+.bg-info-light { background-color: rgba(9, 132, 227, 0.1); }
+
+/* ====== TABLES ====== */
+.table {
+    font-size: 0.9rem;
+}
+
+.table thead th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    border-bottom-width: 2px;
+    padding: 0.8rem;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: 0.75rem 0.8rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(108, 99, 255, 0.03);
+}
+
+/* ====== FORMS ====== */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.15);
+}
+
+.form-control-lg {
+    border-radius: 8px;
+    padding: 0.65rem 1rem;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+/* ====== AUTH PAGE ICON ====== */
+.auth-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+/* ====== BADGES ====== */
+.badge {
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.4em 0.7em;
+    border-radius: 6px;
+}
+
+.bg-primary-custom {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover)) !important;
+}
+
+/* ====== BOOK CARDS (Student View) ====== */
+.book-card {
+    border-left: 4px solid var(--primary-color) !important;
+    transition: all var(--transition-speed);
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* ====== MODALS ====== */
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    border-radius: 16px 16px 0 0;
+    background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg-light));
+    color: #fff;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* ====== FOOTER ====== */
+.footer-custom {
+    background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg-light));
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+}
+
+.footer-custom .text-muted {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ====== ALERTS ====== */
+.alert {
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+/* ====== RESPONSIVE TWEAKS ====== */
+@media (max-width: 768px) {
+    .stat-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-primary-custom {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .table {
+        font-size: 0.8rem;
+    }
+}
+
+/* ====== SKELETON LOADING (optional enhancement) ====== */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ====== SCROLLBAR CUSTOM ====== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
