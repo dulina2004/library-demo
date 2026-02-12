@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $new_available = max(0, $qty_total - $issued_count);
             
             $stmt = $conn->prepare("UPDATE books SET title = ?, author = ?, isbn = ?, publisher = ?, category_id = ?, qty_total = ?, qty_available = ? WHERE id = ?");
-            $stmt->bind_param("ssssiiiii", $title, $author, $isbn, $publisher, $category_id, $qty_total, $new_available, $bookId);
+            $stmt->bind_param("ssssiiii", $title, $author, $isbn, $publisher, $category_id, $qty_total, $new_available, $bookId);
             
             if ($stmt->execute()) {
                 flash('success', 'Book updated successfully.');
